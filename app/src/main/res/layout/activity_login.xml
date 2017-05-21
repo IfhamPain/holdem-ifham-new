@@ -46,7 +46,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="@string/common_signin_button_text" />
+            android:text="@string/common_signin_button_text"
+            android:drawableTop="@drawable/button2"
+            android:drawablePadding="-50sp"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@android:color/transparent"/>
 
         <TextView
             android:id="@+id/textViewSignUp"

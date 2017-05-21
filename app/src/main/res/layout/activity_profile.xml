@@ -25,10 +25,11 @@
         android:layout_height="49dp"
         android:layout_gravity="center_horizontal"
         android:text="Logout"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:layout_marginBottom="22dp"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/buttonDashboard" />
+        android:layout_toEndOf="@+id/buttonDashboard"
+        style="?android:attr/borderlessButtonStyle"/>
 
     <Button
         android:id="@+id/buttonAlarm"
@@ -38,7 +39,11 @@
         android:text="Set Alarm"
         android:textSize="24sp"
         android:layout_below="@+id/textViewUserEmail"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:drawableTop="@drawable/button2"
+        android:drawablePadding="-50sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@android:color/transparent"/>
 
     <Button
         android:id="@+id/buttonDashboard"
@@ -48,7 +53,11 @@
         android:text="Sneak"
         android:textSize="24sp"
         android:layout_below="@+id/buttonAlarm"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:drawableTop="@drawable/button2"
+        android:drawablePadding="-50sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@android:color/transparent"/>
 
     <Button
         android:id="@+id/buttonNewBrush"
@@ -58,5 +67,10 @@
         android:text=" New Brush"
         android:textSize="24sp"
         android:layout_below="@+id/buttonDashboard"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+
+        android:drawableTop="@drawable/button2"
+        android:drawablePadding="-50sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@android:color/transparent"/>
 </RelativeLayout>

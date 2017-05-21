@@ -71,7 +71,11 @@
         android:text="Signup"
         android:textSize="18sp"
         android:layout_above="@+id/textViewSignin"
-        android:layout_marginBottom="9dp" />
+        android:layout_marginBottom="9dp"
+        android:drawableTop="@drawable/button2"
+        android:drawablePadding="-50sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@android:color/transparent"/>
 
     <TextView
         android:id="@+id/textViewSignin"

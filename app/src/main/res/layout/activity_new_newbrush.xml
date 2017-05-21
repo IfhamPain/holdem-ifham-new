@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.chavin.holdem.NewBrush">
+    tools:context="com.example.chavin.myapplication.NewBrush">
     android:layout_width="368dp"
     android:layout_height="495dp"
     tools:layout_editor_absoluteX="8dp"
@@ -27,5 +27,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="33dp"
-        android:text="Add New Brush" />
+        android:text="Add New Brush"
+        android:drawableTop="@drawable/button2"
+        android:drawablePadding="-50sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@android:color/transparent"/>
 </RelativeLayout>

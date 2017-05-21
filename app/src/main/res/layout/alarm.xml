@@ -23,7 +23,11 @@
         android:layout_alignBaseline="@+id/buttonNewAlarm"
         android:layout_alignBottom="@+id/buttonNewAlarm"
         android:layout_alignParentEnd="true"
-        android:text="Stop Alarm" />
+        android:text="Stop Alarm"
+        android:drawableTop="@drawable/button2"
+        android:drawablePadding="-50sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@android:color/transparent"/>
 
     <Button
         android:id="@+id/buttonNewAlarm"
@@ -32,7 +36,11 @@
         android:text="Set Alarm"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="61dp" />
+        android:layout_marginBottom="61dp"
+        android:drawableTop="@drawable/button2"
+        android:drawablePadding="-50sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@android:color/transparent"/>
 
     <TextView
         android:text="Alarm status"
@@ -49,7 +57,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="17dp" />
+        android:layout_marginTop="17dp"
+        android:headerBackground="@color/colorPrimaryDark" />
 
     <TextView
         android:id="@+id/alarm1"
