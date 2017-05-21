@@ -8,8 +8,11 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -33,11 +36,13 @@ public class NewBrush extends AppCompatActivity {
                 String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 databaseReference = FirebaseDatabase.getInstance().getReference().child("Users");
-                databaseReference.child(user.getUid()).push().setValue(date);
                 um.setDate(date);
+                databaseReference.child(user.getUid()).child("User Detail").child("Date").setValue(um);
               
             }
         });
+
+
 
         Calendar c=new GregorianCalendar();
         c.add(Calendar.DATE, 30);
@@ -49,6 +54,7 @@ public class NewBrush extends AppCompatActivity {
         catch(Exception e){
 
         }
+
 
 
 

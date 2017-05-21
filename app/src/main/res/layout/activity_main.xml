@@ -132,13 +132,5 @@
 
     </RadioGroup>
 
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/editTextName"
-        android:layout_below="@+id/Sign_up_heading"
-        android:text="Button" />
-
 </RelativeLayout>
 

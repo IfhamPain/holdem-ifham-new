@@ -50,7 +50,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         }
 
         //getting current user
-        //FirebaseUser user = firebaseAuth.getCurrentUser();
+        FirebaseUser user = firebaseAuth.getCurrentUser();
 
         //initializing views
         textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
@@ -60,7 +60,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         buttonNewBrush = (Button) findViewById(R.id.buttonNewBrush);
 
         //displaying logged in user name
-        //textViewUserEmail.setText("Welcome "+user.getEmail());
+        textViewUserEmail.setText("Welcome "+user.getEmail());
 
         //adding listener to button
         buttonLogout.setOnClickListener(this);
@@ -68,20 +68,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         buttonDashboard.setOnClickListener(this);
         buttonNewBrush.setOnClickListener(this);
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users").child(user.getUid()).child("User Detail").child("name");
-        ref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                String test = dataSnapshot.getValue(String.class);
-                textViewUserEmail.setText(test);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
     }
 
 

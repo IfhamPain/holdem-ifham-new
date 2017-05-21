@@ -14,6 +14,15 @@ public class UserModel {
         String alarm1;
         String alarm2;
         String date;
+        Long timeS;
+    public Long getTimeS() {
+        return timeS;
+    }
+
+    public void setTimeS(Long timeS) {
+        this.timeS = timeS;
+    }
+
 
     public void setAlarm1(String alarm1) {
         this.alarm1 = alarm1;
