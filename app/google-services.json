@@ -1,0 +1,151 @@
+{
+  "project_info": {
+    "project_number": "571325136147",
+    "firebase_url": "https://holdem-362ab.firebaseio.com",
+    "project_id": "holdem-362ab",
+    "storage_bucket": "holdem-362ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571325136147:android:48bfb4b1b69a46b3",
+        "android_client_info": {
+          "package_name": "com.example.chavin.holdem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "571325136147-lh6q1ps6399166jgq8i6cjb1b1q7elho.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chavin.holdem",
+            "certificate_hash": "639020759ff7df44570feca0db9026e08de30ae1"
+          }
+        },
+        {
+          "client_id": "571325136147-c9ons1dg9kqgoh7m5g6vugips3ng73e3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chavin.holdem",
+            "certificate_hash": "56e40cae4edeb50d9a7017b9ea986751ee7eef5d"
+          }
+        },
+        {
+          "client_id": "571325136147-bcvsnvfk5buq3oe1q2iiou096v0rhd15.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUpx-tt3_PdPgKsz_sx9HB2m2nHOlsIwc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "571325136147-bcvsnvfk5buq3oe1q2iiou096v0rhd15.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571325136147:android:36544c1835dbfb33",
+        "android_client_info": {
+          "package_name": "com.example.sahan.holdem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "571325136147-hkfc2i22liud5jd6anlll652drvmihko.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sahan.holdem",
+            "certificate_hash": "f03363332adf2d1e158f6baea7dbf6b6a030f178"
+          }
+        },
+        {
+          "client_id": "571325136147-bcvsnvfk5buq3oe1q2iiou096v0rhd15.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUpx-tt3_PdPgKsz_sx9HB2m2nHOlsIwc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "571325136147-bcvsnvfk5buq3oe1q2iiou096v0rhd15.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571325136147:android:1227e16ee3622e76",
+        "android_client_info": {
+          "package_name": "com.example.chavin.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "571325136147-iff73s3jvecjlb3pb03qo29s7oan3l8r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chavin.myapplication",
+            "certificate_hash": "639020759ff7df44570feca0db9026e08de30ae1"
+          }
+        },
+        {
+          "client_id": "571325136147-bcvsnvfk5buq3oe1q2iiou096v0rhd15.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUpx-tt3_PdPgKsz_sx9HB2m2nHOlsIwc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "571325136147-bcvsnvfk5buq3oe1q2iiou096v0rhd15.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

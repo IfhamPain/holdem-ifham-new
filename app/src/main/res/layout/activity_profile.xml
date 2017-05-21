@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.chavin.holdem.ProfileActivity">
+
+
+    <TextView
+        android:id="@+id/textViewUserEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:text="Welcome"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="121dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Logout"
+        android:textSize="24sp"
+        android:layout_marginBottom="22dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/buttonDashboard" />
+
+    <Button
+        android:id="@+id/buttonAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Set Alarm"
+        android:textSize="24sp"
+        android:layout_below="@+id/textViewUserEmail"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/buttonDashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="Sneak"
+        android:textSize="24sp"
+        android:layout_below="@+id/buttonAlarm"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/buttonNewBrush"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="78dp"
+        android:text=" New Brush"
+        android:textSize="24sp"
+        android:layout_below="@+id/buttonDashboard"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
