@@ -1,21 +1,18 @@
 package com.example.chavin.myapplication;
 
 import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,58 +29,35 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 
-public class NewBrush extends AppCompatActivity {
+/**
+ * Created by Chavin on 6/6/2017.
+ */
 
-    EditText txt_NewBrushDate;
-    Button add_new_Brush;
-    ListView LV;
-    UserModel um = new UserModel();
-    ArrayList<String> brushes;
-    ArrayAdapter<String> arrayAdapter;
-    DatabaseReference dref;
-    ArrayList<String> list = new ArrayList<>();
+public class Appointment extends AppCompatActivity {
+
+
+    EditText txt_NewAppointmentDate;
+    Button buttonMakeAppointment;
     HashMap<String, Object> map1 = new HashMap<>();
+    ListView LV;
     List<String> keyList = new ArrayList<>();
     List<String> dateList = new ArrayList<>();
     Button btnDelete;
     String key = "";
+    ArrayAdapter<String> arrayAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.new_tooth_brush);
-        txt_NewBrushDate = (EditText) findViewById(R.id.txt_NewBrushDate);
-        add_new_Brush = (Button) findViewById(R.id.add_new_Brush);
-        btnDelete = (Button) (findViewById(R.id.buttonDelete));
-        LV = (ListView) findViewById(R.id.newBrushList);
+        setContentView(R.layout.new_appointment);
+        txt_NewAppointmentDate = (EditText) findViewById(R.id.txtNewAppointmentDate);
+        buttonMakeAppointment = (Button) findViewById(R.id.buttonMakeAppointment);
+        LV = (ListView) findViewById(R.id.doctorList);
 
-        arrayAdapter = new ArrayAdapter<String>(NewBrush.this, android.R.layout.simple_list_item_1, dateList);
-
-        //Onclick listener for the list items
-        LV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-                TextView tv = (TextView) view;
-                key = keyList.get(i);
-
-                View.OnClickListener deleteListener = new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users").child(user.getUid());
-                        DatabaseReference ref = databaseReference.child("Brushes").child(key);
-                        ref.removeValue();
-
-
-                    }
-                };
-                btnDelete.setOnClickListener(deleteListener);
-            }
-        });
+        arrayAdapter = new ArrayAdapter<String>(Appointment.this, android.R.layout.simple_list_item_1, dateList);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users").child(user.getUid()).child("Brushes");
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Users").child(user.getUid()).child("Dentists");
         //Query query = ref.orderByKey();
         ref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -124,40 +98,32 @@ public class NewBrush extends AppCompatActivity {
             }
         });
 
+        LV.setAdapter(arrayAdapter);
 
-        View.OnClickListener addListner = new View.OnClickListener() {
+        View.OnClickListener makeAppointment = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                dateList.add(txt_NewBrushDate.getText().toString());
-
-                arrayAdapter.notifyDataSetChanged();
-
-                String brushDate = txt_NewBrushDate.getText().toString();
-                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users");
-                databaseReference.child(user.getUid()).child("Brushes").push().setValue(brushDate);
-
+                Toast.makeText(Appointment.this, "Successfully Sent Notification to the Dentist you selected", Toast.LENGTH_LONG).show();
+                setContentView(R.layout.activity_profile);
             }
         };
-
-
-        add_new_Brush.setOnClickListener(addListner);
-
-        LV.setAdapter(arrayAdapter);
-
+        buttonMakeAppointment.setOnClickListener(makeAppointment);
 
     }
+
+
+
 
 
     public void onStart() {
         super.onStart();
 
-        EditText txtDate = (EditText) findViewById(R.id.txt_NewBrushDate);
-        txt_NewBrushDate.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+       EditText txtNewAppointmentDate = (EditText) findViewById(R.id.txtNewAppointmentDate);
+        txt_NewAppointmentDate.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             public void onFocusChange(View view, boolean hasfocus) {
                 if (hasfocus) {
-                    DateDialogBrush dialog = new DateDialogBrush(view);
+                    DateDialogNewAppointment dialog = new DateDialogNewAppointment(view);
                     FragmentTransaction ft = getFragmentManager().beginTransaction();
                     dialog.show(ft, "DatePicker");
 
@@ -169,7 +135,3 @@ public class NewBrush extends AppCompatActivity {
 
 
 }
-
-
-
-

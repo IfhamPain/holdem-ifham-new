@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context="com.example.chavin.holdem.ProfileActivity">
+    tools:context="com.example.chavin.myapplication.ProfileActivity">
 
 
     <TextView
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:text="Set Alarm"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:layout_below="@+id/textViewUserEmail"
         android:layout_centerHorizontal="true"
         android:drawableTop="@drawable/button2"
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="88dp"
         android:text="Sneak"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:layout_below="@+id/buttonAlarm"
         android:layout_centerHorizontal="true"
         android:drawableTop="@drawable/button2"
@@ -63,12 +63,26 @@
         android:id="@+id/buttonNewBrush"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="78dp"
         android:text=" New Brush"
-        android:textSize="24sp"
-        android:layout_below="@+id/buttonDashboard"
-        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
 
+        android:drawableTop="@drawable/button2"
+        android:drawablePadding="-50sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@android:color/transparent"
+        android:layout_above="@+id/buttonAppointment"
+        android:layout_alignStart="@+id/buttonAppointment"
+        android:layout_marginBottom="51dp" />
+
+    <Button
+        android:id="@+id/buttonAppointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonLogout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:textSize="20sp"
+        android:text="Appointment"
         android:drawableTop="@drawable/button2"
         android:drawablePadding="-50sp"
         style="?android:attr/borderlessButtonStyle"

@@ -37,6 +37,10 @@
             android:name=".CheckHistory"
             android:label="MyApplication"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Appointment"
+            android:label="MyApplication"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <receiver android:name=".Alarm_receiver" />
 
@@ -45,10 +49,6 @@
             android:enabled="true" />
 
         <activity android:name=".NewBrush" />
-        <activity
-            android:name=".Main2Activity"
-            android:label="MyApplication"
-            android:theme="@style/AppTheme.NoActionBar" />
 
         <receiver android:name=".Alarm_receiver"/>
         <service android:name=".RingtoneplayingService" android:enabled="true"></service>

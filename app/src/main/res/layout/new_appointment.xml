@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.chavin.myapplication.Appointment">
+
+
+    <EditText
+        android:id="@+id/txtNewAppointmentDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="126dp"
+        android:ems="10"
+        android:hint="Enter Date"
+        android:inputType="text"
+        android:textSize="24sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ListView
+        android:id="@+id/doctorList"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <Button
+        android:id="@+id/buttonMakeAppointment"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtNewAppointmentDate"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/txtNewAppointmentDate"
+        android:layout_marginBottom="25dp"
+        android:background="@android:color/transparent"
+        android:drawablePadding="-50sp"
+        android:drawableTop="@drawable/button2"
+        android:text="Make Appointment" />
+</RelativeLayout>

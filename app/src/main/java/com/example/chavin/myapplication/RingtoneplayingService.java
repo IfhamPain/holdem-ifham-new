@@ -1,8 +1,13 @@
 package com.example.chavin.myapplication;
 
+import android.annotation.TargetApi;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -23,6 +28,8 @@ public class RingtoneplayingService extends Service {
     public IBinder onBind(Intent intent) {
         return null;
     }
+
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
 
     public int onStartCommand(Intent intent, int flags, int startId){
 
@@ -48,7 +55,7 @@ public class RingtoneplayingService extends Service {
 
         //if else statements
 
-        //if theres no music playing and the user pressed "alarm on"
+        //if there's no music playing and the user pressed "alarm on"
         //music should start playing
         if(!this.isRunning && startId == 1){
 
@@ -59,6 +66,32 @@ public class RingtoneplayingService extends Service {
 
             this.isRunning = true;
             this.startId = 0;
+
+            //notification
+            //set up the notification service
+            NotificationManager notify_manager = (NotificationManager)
+                    getSystemService(NOTIFICATION_SERVICE);
+            //set up an intent that goes to the main activity
+            Intent intent_main_activity = new Intent(this.getApplicationContext(),MainActivity.class);
+            //set up an pending intent
+            PendingIntent pending_intent_main_activity = PendingIntent.getActivity(this,0,
+                    intent_main_activity, 0);
+
+            //making the notification parameters
+
+            Notification notification_popup = new Notification.Builder(this)
+                    .setContentTitle("An alarm is going off")
+                    .setContentText("Click me")
+                    .setSmallIcon(R.drawable.your_icon)
+                    .setContentIntent(pending_intent_main_activity)
+                    .setAutoCancel(true)
+                    .build();
+
+
+            //setup notification start comand
+            notify_manager.notify(0,notification_popup);
+
+
         }
 
         //if there is music playing and the user pressed "alarm off"
@@ -70,6 +103,8 @@ public class RingtoneplayingService extends Service {
 
             this.isRunning = false;
             this.startId = 0;
+
+
 
         }
 

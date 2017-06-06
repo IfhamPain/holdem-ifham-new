@@ -31,6 +31,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private Button buttonAlarm;
     private Button buttonDashboard;
     private Button buttonNewBrush;
+    private Button buttonAppointment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         buttonAlarm = (Button) findViewById(R.id.buttonAlarm);
         buttonDashboard = (Button) findViewById(R.id.buttonDashboard);
         buttonNewBrush = (Button) findViewById(R.id.buttonNewBrush);
+        buttonAppointment = (Button) findViewById(R.id.buttonAppointment);
 
         //displaying logged in user name
         textViewUserEmail.setText("Welcome "+user.getEmail());
@@ -67,6 +69,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         buttonAlarm.setOnClickListener(this);
         buttonDashboard.setOnClickListener(this);
         buttonNewBrush.setOnClickListener(this);
+        buttonAppointment.setOnClickListener(this);
 
     }
 
@@ -86,6 +89,11 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         if(view==buttonNewBrush){
             //starting alarm
             startActivity(new Intent(this, NewBrush.class));
+        }
+
+        if(view==buttonAppointment){
+            //starting alarm
+            startActivity(new Intent(this, Appointment.class));
         }
 
         //if logout is pressed

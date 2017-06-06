@@ -26,6 +26,7 @@
         android:text="Stop Alarm"
         android:drawableTop="@drawable/button2"
         android:drawablePadding="-50sp"
+        android:layout_marginBottom="5dp"
         style="?android:attr/borderlessButtonStyle"
         android:background="@android:color/transparent"/>
 
@@ -34,35 +35,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Set Alarm"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="61dp"
         android:drawableTop="@drawable/button2"
         android:drawablePadding="-50sp"
         style="?android:attr/borderlessButtonStyle"
-        android:background="@android:color/transparent"/>
+        android:background="@android:color/transparent"
+        android:layout_above="@+id/status"
+        android:layout_toStartOf="@+id/status"
+        android:layout_marginBottom="5dp" />
 
     <TextView
         android:text="Alarm status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/status"
+        android:layout_marginBottom="100dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="38dp" />
+        android:layout_centerHorizontal="true" />
 
     <TimePicker
         android:id="@+id/timePicker"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
+        android:headerBackground="@color/colorPrimaryDark"
         android:layout_below="@+id/textView"
-        android:layout_marginTop="17dp"
-        android:headerBackground="@color/colorPrimaryDark" />
+        android:layout_marginBottom="180dp"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/alarm1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/buttonNewAlarm"
         android:layout_alignEnd="@+id/buttonNewAlarm"
@@ -78,6 +79,23 @@
         android:layout_alignTop="@+id/alarm1"
         android:layout_marginEnd="20dp"
         android:text="Alarm 2" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/buttonNewAlarm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp" />
+
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/timePicker"
+        android:layout_alignParentEnd="true"
+        android:text="Delete" />
 
 
 </RelativeLayout>
